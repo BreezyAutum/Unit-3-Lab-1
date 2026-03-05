@@ -2,10 +2,10 @@
 import random
 def roll_dice():
   dlist = []
-  NUM_DICE_TO_ROLL = input("How many dice?\n")
-  for roll in NUM_DICE_TO_ROLL:
+  NUM_DICE_TO_ROLL = int(input("How many dice?\n"))
+  for i in range(NUM_DICE_TO_ROLL):
     roll = random.randint(1,6)
-    dlist.append(roll)  NUM_DICE_TO_ROLL
+    dlist.append(roll)
   print(dlist)
-  return dlist, NUM_DICE_TO_ROLL, dlist
+  return dlist, NUM_DICE_TO_ROLL
 roll_dice()
