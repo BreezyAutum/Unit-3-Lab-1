@@ -6,15 +6,14 @@ SEED = 2183
 import roll_dice
 
 # implement most_repeats() here! 
-def most_repeats(repeats):
-    """receives a list of integers (representing dice values) as the parameter and returns the highest number of repeated values. E.g. if the received list contains [1, 1, 4, 4, 4], the returned value would be 3"""
-    repeats = roll_dice.dlist.count()
-    return repeats
+def repeats():
+    global counts; counts = roll_dice.dlist.counts
+    return counts
  
-def main(): 
+def main():
     random.seed(SEED) 
     # implement remaining logic here! 
-    print(f"Your roll of {roll_dice(dlist)} contains {most_repeats(repeats)} of a kind.\nDo you want to roll again (Y/N)?")
+    print(f"Your roll of {roll_dice.dlist} contains {repeats.counts} of a kind.")
     again = input("Do you want to roll again?\n")
     if "Y" in again:
         roll_dice()
