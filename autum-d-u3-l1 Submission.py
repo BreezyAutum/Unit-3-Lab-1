@@ -1,7 +1,6 @@
 import random 
 NUM_DICE_TO_ROLL = 5 
 SEED = 2183
-dlist = []
 
 # implement roll_dice() here! 
 def roll_dice():
@@ -13,20 +12,19 @@ def roll_dice():
     dlist.append(roll)
   print(dlist)
   return dlist, NUM_DICE_TO_ROLL, roll
+roll_dice()
 
 # implement most_repeats() here! 
 def repeats():
-    global dlist;
     '''Finds how many times the most common number was rolled in roll_dice'''
     repeats = roll_dice.dlist.count
     repeats = int(repeats)
     return repeats
  
 def main():
-    roll_dice()
     random.seed(SEED) 
     # implement remaining logic here! 
-    print("Your roll of", dlist, "contains", repeats()," of a kind.")
+    print("Your roll of", dlist, "contains", repeats," of a kind.")
     again = input("Do you want to roll again?\n")
     if "Y" in again:
         main()
